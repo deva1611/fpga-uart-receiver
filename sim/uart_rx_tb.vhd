@@ -28,8 +28,8 @@ architecture Behavioral of uart_rx_tb is
       wait for BIT_PERIOD;
     end loop;
     tx_line <= '1';
-    wait for BIT_PERIOD;
-  end procedure;
+    wait for BIT_PERIOD / 2;
+    end procedure;
 
 begin
 
