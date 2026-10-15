@@ -1,13 +1,12 @@
 # FPGA UART Receiver — VHDL
 
-A UART receiver implemented in VHDL with a self-checking testbench, simulated end-to-end in Vivado without physical hardware. Designed to demonstrate hardware/software co-design and pre-silicon FPGA validation methodology.
-
+Demonstrates a pre-silicon validation workflow: RTL design, self-checking testbench and waveform review.
 ## Overview
 
 Implements a complete UART receive chain operating at 115200 baud on a 50 MHz clock (Artix-7 target):
 
 - Start bit detection with midpoint sampling for noise rejection
-- 8-bit LSB-first data capture with per-bit baud-rate alignment
+- Start bit detection with mid-bit sampling
 - Stop bit validation and single-cycle data_valid handshake
 - Synchronous reset for deterministic initialisation
 
